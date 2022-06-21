@@ -1,6 +1,5 @@
-for(let i = 0; i < splitPath.length; i++) {
-  //   switch(splitPath[i]) {
-  //     case '..', '.':
-  //       return;
-  //   }
+if (queue.front.val === "{" && queue.rear.val === "}") {
+  //   console.log(true);
+  //   queue.front = queue.front.next;
   // }
+  // return queue.rear;
