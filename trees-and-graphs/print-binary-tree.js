@@ -7,23 +7,21 @@ class Node {
 }
 
 let spaceCount = 5;
-function printEachBranch(root, startSpace) {
+function traverseInOrderRec(root, startSpace) {
   if (root == null) {
     return;
   }
 
   startSpace += spaceCount;
 
-  printEachBranch(root.right, startSpace);
-
+  traverseInOrderRec(root.right, startSpace);
   console.log(`${" ".repeat(startSpace)}${root.root}`);
   // console.log(`${" ".repeat(startSpace)}${root.root}\n`);
-
-  printEachBranch(root.left, startSpace);
+  traverseInOrderRec(root.left, startSpace);
 }
 
 function print2DTree(tree) {
-  printEachBranch(tree, 0);
+  traverseInOrderRec(tree, 0);
 }
 
 let tree = new Node(1);
